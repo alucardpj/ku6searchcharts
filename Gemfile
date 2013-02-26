@@ -21,6 +21,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'lazy_high_charts', :github => 'michelson/lazy_high_charts'
+
 gem 'mongoid', '~> 3.0.0'
 
 # To use ActiveModel has_secure_password
