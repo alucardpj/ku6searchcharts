@@ -27,6 +27,8 @@ gem 'mongoid', '~> 3.0.0'
 
 group :development do
   gem 'thin'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 # To use ActiveModel has_secure_password
