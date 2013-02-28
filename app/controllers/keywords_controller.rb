@@ -11,6 +11,8 @@ class KeywordsController < ApplicationController
         xaxis |= temphash.keys
         resulthash[q] = temphash
       end
+      xaxis.sort! {|a, b| a <=> b}
+      xaxis = (Date.parse(xaxis[0])..Date.parse(xaxis[-1])).to_a.map{|d| d.to_s}
       xaxis.each do |category|
         resulthash.each_value do |value|
           if value[category].nil?
@@ -20,7 +22,7 @@ class KeywordsController < ApplicationController
       end
       @h1 = LazyHighCharts::HighChart.new('graph') do |f|
         f.title({ :text => params['q']})
-        f.options[:xAxis][:categories] = xaxis.sort { |a, b| a <=> b }
+        f.options[:xAxis][:categories] = xaxis
         resulthash.each do |keyword, counthash|
           count = counthash.to_a.sort { |a, b| a[0] <=> b[0] }.transpose[1]
           f.series(:type => 'spline', :name => keyword, :data => count)
