@@ -23,7 +23,7 @@ gem 'jquery-rails'
 
 gem 'lazy_high_charts', :github => 'michelson/lazy_high_charts'
 
-gem 'mongoid', '~> 3.0.0'
+gem 'mongoid', '~> 3.1.0'
 
 group :development do
   gem 'thin'

@@ -48,12 +48,12 @@ GEM
     coffee-script-source (1.5.0)
     daemons (1.1.9)
     erubis (2.7.0)
-    eventmachine (1.0.0)
+    eventmachine (1.0.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     hash-deep-merge (0.1.1)
     hike (1.2.1)
-    i18n (0.6.2)
+    i18n (0.6.4)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -65,9 +65,9 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.21)
-    mongoid (3.0.23)
-      activemodel (~> 3.1)
-      moped (~> 1.2)
+    mongoid (3.1.2)
+      activemodel (~> 3.2)
+      moped (~> 1.4.2)
       origin (~> 1.0)
       tzinfo (~> 0.3.22)
     moped (1.4.2)
@@ -137,7 +137,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   lazy_high_charts!
-  mongoid (~> 3.0.0)
+  mongoid (~> 3.1.0)
   pry
   pry-nav
   rails (= 3.2.12)
