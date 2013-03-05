@@ -4,4 +4,6 @@
 zh:
   keyword:
     label_search_for: "搜索关键字"
+    label_search_from: "从"
+    label_search_to: "到"
     label_search_button: "搜索"

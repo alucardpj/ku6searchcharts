@@ -20,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'lazy_high_charts', :github => 'michelson/lazy_high_charts'
 

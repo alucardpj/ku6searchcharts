@@ -1,5 +1,17 @@
+<% content_for :scripts do %>
+  <script type="text/javascript">
+    $(function() {
+      $('.datepicker').datepicker();
+    });
+  </script>
+<% end %>
+
 <%= form_tag(keywords_query_path, :method => "get") do %>
   <%= label_tag(:q, t("keyword.label_search_for")) %>
   <%= text_field_tag(:q) %>
+  <%= label_tag(:from, t("keyword.label_search_from")) %>
+  <%= text_field_tag(:from, nil, :class => 'datepicker') %>
+  <%= label_tag(:to, t("keyword.label_search_to")) %>
+  <%= text_field_tag(:to, nil, :class => 'datepicker') %>
   <%= submit_tag(t("keyword.label_search_button")) %>
 <% end %>
