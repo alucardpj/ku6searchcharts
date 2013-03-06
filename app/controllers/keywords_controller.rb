@@ -5,7 +5,7 @@ class KeywordsController < ApplicationController
       xaxis = []
       resulthash = Hash.new
       qs.each do |q|
-        result = Keyword.where(keyword: q)
+        result = Keyword.where(keyword: q).between(date: params['from']..params['to'])
         temphash = Hash.new
         result.each { |node| temphash[node.date] = node.count }
         xaxis |= temphash.keys
