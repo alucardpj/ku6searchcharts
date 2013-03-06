@@ -30,6 +30,7 @@ group :development do
   gem 'thin'
   gem 'pry'
   gem 'pry-nav'
+  gem 'quiet_assets'
 end
 
 # To use ActiveModel has_secure_password
