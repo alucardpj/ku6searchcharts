@@ -6,12 +6,21 @@
   </script>
 <% end %>
 
-<%= form_tag(keywords_query_path, :method => "get") do %>
-  <%= label_tag(:q, t("keyword.label_search_for")) %>
-  <%= text_field_tag(:q) %>
-  <%= label_tag(:from, t("keyword.label_search_from")) %>
-  <%= text_field_tag(:from, nil, :class => 'datepicker') %>
-  <%= label_tag(:to, t("keyword.label_search_to")) %>
-  <%= text_field_tag(:to, nil, :class => 'datepicker') %>
-  <%= submit_tag(t("keyword.label_search_button")) %>
+<%= form_for @search, :url=>keywords_query_path, :method=>:get, :validate=>true do |f| %>
+    <div>
+      <%= f.error_messages %>
+    </div>
+    <div>
+      <%= f.label :q, t("keyword.label_search_for") %>
+      <%= f.text_field :q %>
+    </div>
+    <div>
+      <%= f.label :from, t("keyword.label_search_from") %>
+      <%= f.text_field :from, :class => 'datepicker' %>
+      <%= f.label :to, t("keyword.label_search_to") %>
+      <%= f.text_field :to, :class => 'datepicker' %>
+    </div>
+    <div>
+      <%= f.submit t("keyword.label_search_button") %>
+    </div>
 <% end %>

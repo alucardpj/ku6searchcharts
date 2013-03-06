@@ -25,6 +25,7 @@ gem 'jquery-ui-rails'
 gem 'lazy_high_charts', :github => 'michelson/lazy_high_charts'
 
 gem 'mongoid', '~> 3.1.0'
+gem "dynamic_form"
 
 group :development do
   gem 'thin'

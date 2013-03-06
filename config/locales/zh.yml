@@ -7,3 +7,10 @@ zh:
     label_search_from: "从"
     label_search_to: "到"
     label_search_button: "搜索"
+  validation:
+    date_error: "起始日期应早于终了日期！"
+  activerecord:
+    errors:
+      template:
+        header: "错误"
+        body: "错误"
