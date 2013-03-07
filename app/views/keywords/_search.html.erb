@@ -6,7 +6,7 @@
   </script>
 <% end %>
 
-<%= form_for @search, :url=>keywords_query_path, :method=>:get, :validate=>true do |f| %>
+<%= form_for getsearch, :url=>keywords_query_path, :method=>:get, :validate=>true do |f| %>
     <div>
       <%= f.error_messages %>
     </div>
